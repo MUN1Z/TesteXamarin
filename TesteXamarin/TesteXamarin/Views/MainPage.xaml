@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="TesteXamarin.Views.MainPage"
+             Title="{Binding Title}">
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+      
+    <Label FontSize="50" 
+           AutomationId="LblNumber"
+           Text="{Binding Number}"
+           StyleId = "lbNumber"/>
+      
+        <Button Text="Inicar"
+                AutomationId="BtnStart"
+                BackgroundColor="#2196F3" 
+                Command="{Binding BtnStartCommand}"
+                VerticalOptions="End"
+                BorderRadius="3" 
+                TextColor="White" />
+      
+    </StackLayout>
+</ContentPage>
