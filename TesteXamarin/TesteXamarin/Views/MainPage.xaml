@@ -19,6 +19,30 @@
                 VerticalOptions="End"
                 BorderRadius="3" 
                 TextColor="White" />
+
+        <Button Text="PieChart"
+                AutomationId="BtnStart"
+                BackgroundColor="#2196F3" 
+                Command="{Binding BtnPieChartPageCommand}"
+                VerticalOptions="End"
+                BorderRadius="3" 
+                TextColor="White" />
       
+        <Button Text="Bar"
+                AutomationId="BtnStart"
+                BackgroundColor="#2196F3" 
+                Command="{Binding BtnBarPageCommand}"
+                VerticalOptions="End"
+                BorderRadius="3" 
+                TextColor="White" />
+
+        <Button Text="Line"
+                AutomationId="BtnStart"
+                BackgroundColor="#2196F3" 
+                Command="{Binding BtnLinePageCommand}"
+                VerticalOptions="End"
+                BorderRadius="3" 
+                TextColor="White" />
+
     </StackLayout>
 </ContentPage>

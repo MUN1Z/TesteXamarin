@@ -50,6 +50,7 @@
     <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Core.6.3.0\lib\net45\Prism.dll</HintPath>
     </Reference>
+    <Reference Include="Prism.Forms, Version=6.3.0.0, Culture=neutral, PublicKeyToken=null" />
     <Reference Include="Refit, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\refit.2.4.1\lib\Net45\Refit.dll</HintPath>
     </Reference>

@@ -10,7 +10,7 @@ namespace TesteXamarin.Test
         [TestMethod]
         public async Task TestChangeNumber()
         {
-            MainPageViewModel vm = new MainPageViewModel();
+            MainPageViewModel vm = new MainPageViewModel(null);
 
             int NumberOld = vm.Number;
 
@@ -24,7 +24,7 @@ namespace TesteXamarin.Test
         [TestMethod]
         public async Task TestNotChangeNumber()
         {
-            MainPageViewModel vm = new MainPageViewModel();
+            MainPageViewModel vm = new MainPageViewModel(null);
             
             int NumberOld = vm.Number;
             

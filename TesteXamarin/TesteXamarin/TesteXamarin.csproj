@@ -35,10 +35,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Model\Data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\IService.cs" />
     <Compile Include="Service\ServiceGenerator.cs" />
+    <Compile Include="ViewModels\BarPageViewModel.cs" />
+    <Compile Include="ViewModels\LinePageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="ViewModels\PieChartPageViewModel.cs" />
+    <Compile Include="Views\BarPage.xaml.cs">
+      <DependentUpon>BarPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LinePage.xaml.cs">
+      <DependentUpon>LinePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PieChartPage.xaml.cs">
+      <DependentUpon>PieChartPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -67,6 +80,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot, Version=1.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OxyPlot.Core.1.0.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1+Xamarin.iOS10\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Xamarin.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\OxyPlot.Xamarin.Forms.1.0.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10\OxyPlot.Xamarin.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Prism, Version=6.3.0.0, Culture=neutral, PublicKeyToken=40ee6c3a2184dc59, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Prism.Core.6.3.0\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Prism.dll</HintPath>
@@ -102,6 +121,24 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\PieChartPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\BarPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\LinePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\refit.2.4.1\build\portable-net45+netcore45+wp8+wpa81+monoandroid+xamarin.ios10\refit.targets" Condition="Exists('..\..\packages\refit.2.4.1\build\portable-net45+netcore45+wp8+wpa81+monoandroid+xamarin.ios10\refit.targets')" />

@@ -2,12 +2,11 @@
 
 namespace TesteXamarin.Views
 {
-    public partial class MainPage : ContentPage
+    public partial class LinePage : ContentPage
     {
-        public MainPage()
+        public LinePage()
         {
             InitializeComponent();
         }
-        
     }
 }

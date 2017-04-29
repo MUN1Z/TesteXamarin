@@ -19,6 +19,7 @@ namespace TesteXamarin.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            OxyPlot.Xamarin.Forms.Platform.Android.PlotViewRenderer.Init();
             Xamarin.Forms.Forms.ViewInitialized += (sender, e) =>
             {
                 if (!string.IsNullOrWhiteSpace(e.View.StyleId))
